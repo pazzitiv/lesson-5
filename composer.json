@@ -1,0 +1,16 @@
+{
+    "name": "pazzi/lesson5",
+    "description": "Learn project",
+    "authors": [
+        {
+            "name": "Alexey Mustafin",
+            "email": "pazzitiv@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "lib/"
+        }
+    },
+    "require": {}
+}
