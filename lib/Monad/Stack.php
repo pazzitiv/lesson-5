@@ -30,9 +30,11 @@ class Stack
     public function pop(): static
     {
         if($this->parent) {
-            $this->parent->poped = end($this->stack);
+            $stack = new Stack();
+            $stack->apply($this->parent->toArray());
+            $stack->poped = end($this->stack);
 
-            return $this->parent;
+            return $stack;
         }
 
         return $this;
