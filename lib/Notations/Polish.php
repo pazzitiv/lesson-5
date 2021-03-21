@@ -29,7 +29,7 @@ class Polish
                         $stack = $stack->pop();
                         $result .= $stack->poped;
                     }
-                    $stack->push($lexem);
+                    $stack = $stack->push($lexem);
                     break;
                 case ')':
                     $stackArr = fn($stackObj) => $stackObj->toArray();
@@ -37,7 +37,7 @@ class Polish
                         $stack = $stack->pop();
                         $result .= $stack->poped;
                     }
-                    $stack->pop();
+                    $stack = $stack->pop();
                     break;
             }
         }
